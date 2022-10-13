@@ -1,0 +1,7 @@
+/.nix/node2nix/result
+/result
+/node_modules
+/node_modules/
+/.npm
+/.npm/
+/.direnv/
