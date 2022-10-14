@@ -49,6 +49,7 @@ let
     projectNodePackages.npm
     projectNodePackages.typescript
     projectNodePackages.ts-node
+    projectNodePackages.parcel-bundler
   ];
 
   NPM_CONFIG_PREFIX = toString ./.npm;

@@ -2,5 +2,6 @@
   "npm",
   "typescript",
   "ts-node",
-  "node2nix"
+  "node2nix",
+  "parcel-bundler"
 ]
