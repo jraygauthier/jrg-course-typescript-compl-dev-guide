@@ -1,0 +1,26 @@
+default:
+    @just --list
+
+build-naive:
+    tsc ./src/index.ts
+
+compiler-init:
+    tsc --init
+
+build:
+    tsc
+
+watch:
+    tsc -w
+
+run-naive:
+    node ./build/index.js
+
+package-init:
+    npm init -y
+
+package-nodemon:
+    npm install nodemon concurrently
+
+run:
+    npm start
