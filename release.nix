@@ -44,7 +44,7 @@ let
   projectNodePackages = callPackage ./.nix/node2nix { nodejs = projectNodeJs; };
   commonShellDeps = [
     coreutils
-    gnumake
+    just
     projectNodeJs
     projectNodePackages.npm
     projectNodePackages.typescript
