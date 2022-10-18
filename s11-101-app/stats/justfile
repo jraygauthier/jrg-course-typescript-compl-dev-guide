@@ -1,0 +1,11 @@
+default:
+    @just --list
+
+init-setup:
+    npm init -y
+    tsc --init
+    npm install nodemon concurrently
+    npm install @types/node
+
+run:
+    npm start
