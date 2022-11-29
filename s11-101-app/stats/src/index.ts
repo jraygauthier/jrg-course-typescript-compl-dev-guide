@@ -1,15 +1,28 @@
 import { MatchReader } from './MatchReader';
-import { CsvFileReader } from './CsvFileReader';
-import { MatchResult } from './MatchResult';
+import { Summary } from './Summary'
 
+const matchReader = MatchReader.fromCsv('football.csv');
+matchReader.load();
 
+const summary = Summary.winsAnalysisWithHtmlReport('Man United');
+summary.buildAndPrintReport(matchReader.matches);
+
+/*
 // Create an object that satisfiles the 'DataReader' interface
 const csvFileReader = new CsvFileReader('football.csv')
 
 // Create an instance of MatchReader and pass in something satisfying
 // the 'DataReader' interface
 const matchReader = new MatchReader(csvFileReader);
-matchReader.load();
+*/
+
+/*
+const summary = new Summary(
+  new WinsAnalysis('Man United'),
+  new ConsoleReport()
+);
+*/
+
 
 /*
 const dateOfFirstMatch = reader.data[0][0];
@@ -30,6 +43,7 @@ const awayWin = 'A';
 const draw = 'D';
 */
 
+/* Moved to module.
 let manUnitedWins = 0;
 
 for (let match of matchReader.matches) {
@@ -42,3 +56,4 @@ for (let match of matchReader.matches) {
 }
 
 console.log(`Man United won ${manUnitedWins} games`)
+*/
